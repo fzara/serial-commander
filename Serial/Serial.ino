@@ -6,7 +6,7 @@ void setup() {
 }
 
 void loop() {
-	// put your main code here, to run repeatedly:
+	// Try to convert this to a sequential command analysis. E.g. PIN 15 HIGH
 	if (Serial.available() > 0) {
 		String cmd = Serial.readString();
 		Serial.println(cmd);
