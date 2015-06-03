@@ -1,5 +1,9 @@
-	
-	
+
+#define VERBOSE
+
+#ifdef VERBOSE
+#endif	
+
 String cmd;
 char cmdMode[2];
 byte nextSpace, lastSpace, cmdPinNum;
@@ -21,11 +25,12 @@ void loop() {
 		cmd = "";
 		
 		if (strcmp(cmdMode,"DR") == 0) {
+			#ifdef VERBOSE
 			Serial.print("Digital Read from pin number ");
 			Serial.print(cmdPinNum);
 			Serial.print(" :");
 			Serial.println(DigRead());
-			
+			#endif
 		}
 		if (strcmp(cmdMode,"DW") == 0) {
 			Serial.print("Writing ");
