@@ -8,4 +8,4 @@ Command pattern:
 34 = Pin Number
 5678 = Value
 
-E.g. DW 15 1
+E.g. DW 15 
